@@ -1,3 +1,4 @@
+-- Populate departments table
 INSERT INTO departments
     (name)
 VALUES
@@ -6,6 +7,7 @@ VALUES
     ('Janitor'),
     ('Senior Developer');
 
+-- populate roles table
 INSERT INTO roles
     (title, salary, department_id)
 VALUES 
@@ -25,6 +27,7 @@ VALUES
     ('Planner', '60000.06', 4),
     ('Manager', '90000.06', 4);
 
+-- populate employees table
 INSERT INTO employees   
     (first_name, last_name, role_id, manager_id)
 VALUES
