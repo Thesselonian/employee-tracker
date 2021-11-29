@@ -20,8 +20,8 @@ router.get('/departments', (req, res) => {
 
 //Add a department
 router.post('/departments', ({ body }, res) => {
-    const sql = `INSERT INTO departments (id, name) VALUES(?,?)`;
-    const params = [body.id, body.name];
+    const sql = `INSERT INTO departments (name) VALUES(?)`;
+    const params = body.name;
 
     db.query(sql, params, (err, result) => {
         if (err) {
@@ -37,3 +37,5 @@ router.post('/departments', ({ body }, res) => {
 });
 
 module.exports = router;
+
+// INSERT INTO departments (name) VALUES ('health');

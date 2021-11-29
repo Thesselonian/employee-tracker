@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const {getDepartments, getEmployees, getRoles} = require('./lib/index');
+const {getDepartments, getEmployees, getRoles, promptAddDepartment} = require('./lib/index');
 
 //prompt for how the user would like to interact with the employee tracker database
 const promptDatabaseActions = () => {
@@ -33,7 +33,7 @@ const promptDatabaseActions = () => {
                 getEmployees();
                 break;
             case 'Add a department.':
-                console.log('line 26');
+                promptAddDepartment()
                 break;
             case 'Add a role.':
                 console.log('line 26');
