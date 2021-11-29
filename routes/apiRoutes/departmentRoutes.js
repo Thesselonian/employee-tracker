@@ -18,4 +18,22 @@ router.get('/departments', (req, res) => {
     });
 });
 
+//Add a department
+router.post('/departments', ({ body }, res) => {
+    const sql = `INSERT INTO departments (id, name) VALUES(?,?)`;
+    const params = [body.id, body.name];
+
+    db.query(sql, params, (err, result) => {
+        if (err) {
+            res.status(400).json({ error: err.message });
+            return;
+        }
+        res.json({
+            message: 'success',
+            data: body,
+            changes: result.affectedRows
+        });
+    });
+});
+
 module.exports = router;

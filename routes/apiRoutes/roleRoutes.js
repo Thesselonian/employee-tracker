@@ -22,5 +22,3 @@ router.get('/roles', (req, res) => {
 });
 
 module.exports = router;
-
-// SELECT * FROM roles INNER JOIN departments ON roles.department_id = departments.id;

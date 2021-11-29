@@ -29,21 +29,21 @@ VALUES
 
 -- populate employees table
 INSERT INTO employees   
-    (first_name, last_name, role_id, manager_id)
+    (first_name, last_name, role_id, manager_id, department_id)
 VALUES
-    ('Eric', 'Young', 1, 4),
-    ('Bob', 'Willbanks', 2, 4),
-    ('Travis', 'Jones', 3, 4),
-    ('James', 'Fraser', 4, 15),
-  ('Jack', 'London', 5, 8),
-  ('Robert', 'Bruce', 6, 8),
-  ('Peter', 'Greenaway', 7, 8),
-  ('Derek', 'Jarman', 8, 15),
-  ('Paolo', 'Pasolini', 9, 11),
-  ('Heathcote', 'Williams', 10, 11),
-  ('Sandy', 'Powell', 11, NULL),
-  ('Emil', 'Zola', 12, 15),
-  ('Sissy', 'Coalpits', 13, 15),
-  ('Antoinette', 'Capet', 14, 15),
-  ('Samuel', 'Delany', 15, NULL);
+    ('Eric', 'Young', 1, 4, 1),
+    ('Bob', 'Willbanks', 2, 4, 1),
+    ('Travis', 'Jones', 3, 4, 1),
+    ('James', 'Fraser', 4, 15, 1),
+  ('Jack', 'London', 5, 8, 2),
+  ('Robert', 'Bruce', 6, 8, 2),
+  ('Peter', 'Greenaway', 7, 8, 2),
+  ('Derek', 'Jarman', 8, 15, 2),
+  ('Paolo', 'Pasolini', 9, 11, 3),
+  ('Heathcote', 'Williams', 10, 11, 3),
+  ('Sandy', 'Powell', 11, NULL, 3),
+  ('Emil', 'Zola', 12, 15, 4),
+  ('Sissy', 'Coalpits', 13, 15, 4),
+  ('Antoinette', 'Capet', 14, 15, 4),
+  ('Samuel', 'Delany', 15, NULL, 4);
   
