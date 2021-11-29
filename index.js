@@ -26,10 +26,10 @@ const promptDatabaseActions = () => {
                 getDepartments();
                 break;
             case 'View all roles.':
-                console.log('line 26');
+                getRoles();
                 break;
             case 'View all employees.':
-                console.log('line 26');
+                getEmployees();
                 break;
             case 'Add a department.':
                 console.log('line 26');
