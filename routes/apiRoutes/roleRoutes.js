@@ -2,9 +2,12 @@ const express = require('express');
 const router = express.Router();
 const db = require('../../db/connection');
 
-// Get all roles
+// Get all role titles, id's, department role belongs to & salary
 router.get('/roles', (req, res) => {
-    const sql = `SELECT * FROM roles`;
+    const sql = `SELECT roles.id, roles.title, roles.salary, departments.name AS department 
+                FROM roles 
+                INNER JOIN departments ON roles.department_id = departments.id;
+                `;
 
     db.query(sql, (err, rows) => {
         if (err) {
@@ -19,3 +22,5 @@ router.get('/roles', (req, res) => {
 });
 
 module.exports = router;
+
+// SELECT * FROM roles INNER JOIN departments ON roles.department_id = departments.id;

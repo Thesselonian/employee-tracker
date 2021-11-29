@@ -16,6 +16,7 @@ const promptDatabaseActions = () => {
                 'Add a role.',
                 'Add an employee.',
                 'Update an employee role.',
+                'Quit'
             ]
         }
     )
@@ -44,14 +45,9 @@ const promptDatabaseActions = () => {
                 console.log('line 26');
                 break;
         }
-        // if(typeOfEmployee.addEmployeeType === 'engineer') {
-        //    return promptEngineerQuestions(employees);
-        // } else if(typeOfEmployee.addEmployeeType === 'intern') {
-        //    return promptInternQuestions(employees);
-        // } else {
-        //   return employees
-        // }
     })
 }
 
 promptDatabaseActions();
+
+module.exports = promptDatabaseActions;
