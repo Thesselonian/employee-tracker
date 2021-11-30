@@ -21,4 +21,22 @@ router.get('/roles', (req, res) => {
     });
 });
 
+//Add a role
+router.post('/roles', ({ body }, res) => {
+    const sql = `INSERT INTO roles (title, salary, department_id) VALUES(?, ?, ?)`;
+    const params = [body.title, body.salary, body.department_id];
+
+    db.query(sql, params, (err, result) => {
+        if (err) {
+            res.status(400).json({ error: err.message });
+            return;
+        }
+        res.json({
+            message: 'success',
+            data: body,
+            changes: result.affectedRows
+        });
+    });
+});
+
 module.exports = router;

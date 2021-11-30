@@ -37,5 +37,3 @@ router.post('/departments', ({ body }, res) => {
 });
 
 module.exports = router;
-
-// INSERT INTO departments (name) VALUES ('health');
