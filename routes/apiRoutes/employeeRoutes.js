@@ -44,4 +44,28 @@ router.post('/employees', ({ body }, res) => {
     });
 });
 
+// Update an employee's role
+router.put('/employees/:id', (req, res) => {
+
+    const sql = `UPDATE employees SET role_id = ? 
+                 WHERE id = ?`;
+    const params = [req.body.role_id, req.params.id];
+
+    db.query(sql, params, (err, result) => {
+        if (err) {
+            res.status(400).json({ error: err.message });
+        } else if (!result.affectedRows) {
+            res.json({
+                message: 'employee not found'
+            });
+        } else {
+            res.json({
+                message: 'success',
+                data: req.body,
+                changes: result.affectedRows
+            });
+        }
+    });
+});
+
 module.exports = router;

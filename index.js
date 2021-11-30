@@ -1,5 +1,5 @@
 const inquirer = require('inquirer');
-const {promptAddDepartment, promptAddRole, promptAddEmployee, displayEmployees, displayDepartments, displayRoles } = require('./lib/index');
+const {promptAddDepartment, promptAddRole, promptAddEmployee, displayEmployees, displayDepartments, displayRoles, promptUpdateEmployeeRole } = require('./lib/index');
 
 //prompt for how the user would like to interact with the employee tracker database
 const promptDatabaseActions = () => {
@@ -36,19 +36,20 @@ const promptDatabaseActions = () => {
                 promptAddDepartment();
                 break;
             case 'Add a role.':
-                promptAddRole()
+                promptAddRole();
                 break;
             case 'Add an employee.':
                 promptAddEmployee();
                 break;
             case 'Update an employee role.':
-                console.log('line 26');
+                promptUpdateEmployeeRole();
+                break;
+            case 'Quit':
                 break;
         }
     })
 }
 
 promptDatabaseActions();
-
 
 module.exports = promptDatabaseActions;
