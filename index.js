@@ -52,4 +52,4 @@ const promptDatabaseActions = () => {
 
 promptDatabaseActions();
 
-module.exports = promptDatabaseActions;
+module.exports = promptDatabaseActions

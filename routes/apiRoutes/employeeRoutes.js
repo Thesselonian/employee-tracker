@@ -10,8 +10,8 @@ router.get('/employees', (req, res) => {
                 departments.name AS Department,
                 CONCAT(m.first_name, ', ', m.last_name) AS Manager_Name
                 FROM employees e
-                INNER JOIN roles ON e.role_id = roles.id 
-                INNER JOIN departments ON e.department_id = departments.id
+                LEFT JOIN roles ON e.role_id = roles.id 
+                LEFT JOIN departments ON e.department_id = departments.id
                 LEFT JOIN employees m ON e.manager_id = m.id;`
 
     db.query(sql, (err, rows) => {
