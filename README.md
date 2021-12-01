@@ -1,5 +1,6 @@
 # employee-tracker
-Mysql database uses Inquirer to facilitate user queries and inputs for an employee tracker
+
+App uses Inquirer to facilitate user interaction with a mysql database. The database contains 3 tables for tracking employees. These are the employees, departments and roles tables. Inquirer prompts allow the user to view departments, view roles, view employees, add a department, add a role, add an employee and update an employee role. 
 
 
 ## GitHub Repository URL
